@@ -2,7 +2,8 @@
 
 <launch>
   <arg name="folder_path"            default="$(find grid_map_pcl)/data"/>
-  <arg name="pcd_filename"           default="input_cloud.pcd" />
+  <!-- <arg name="pcd_filename"           default="input_cloud.pcd" /> -->
+  <arg name="pcd_filename"           default="test_pcd.pcd" />
   <arg name="configFilePath_"       default="$(find grid_map_pcl)/config/parameters.yaml" />
   <arg name="map_rosbag_topic"       default="grid_map" />
   <arg name="output_grid_map"        default="$(find grid_map_pcl)/data/input_cloud.bag" />
@@ -28,7 +29,7 @@
     <param name="set_verbosity_to_debug"  type="bool"   value="$(arg set_verbosity_to_debug)" />
   </node>
   
-  <node name="rviz_grid_map_pcl" pkg="rviz" type="rviz" args="-d $(find grid_map_pcl)/rviz/grid_map_vis.rviz" />
+  <!-- <node name="rviz_grid_map_pcl" pkg="rviz" type="rviz" args="-d $(find grid_map_pcl)/rviz/grid_map_vis.rviz" /> -->
   
   <node name="point_cloud_publisher_node" 
         pkg="grid_map_pcl"
